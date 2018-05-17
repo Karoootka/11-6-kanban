@@ -24,9 +24,9 @@
 }
 
 .column-container {
-  .card {
-    height: 100%;
-  }
+  // .card {
+  //   height: 100%;
+  // }
   .col {
     margin-top: 20px;
   }
@@ -54,6 +54,8 @@
   }
   ul {
     list-style: none;
+    min-height: 30px;
+    margin: 0;
   }
 }
 

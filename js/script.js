@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var el = document.getElementById(id);
     var sortable = Sortable.create(el, {
       group: 'kanban',
-      sort: true
+      sort: true,
+      animation: 100
     });
   };
 
