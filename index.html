@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <title>Kanban board</title>
+  <link href="https://fonts.googleapis.com/css?family=Passion+One:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+  <div id="board" class="board">
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+          <button class="create-column btn btn-secondary" type="button">Add a column</button>
+          <h1 class="navbar-brand">Kanban board</h1>
+        </div>
+      </nav>
+      <div class="column-container container row"></div>
+  </div>
+
+
+	<!-- <div id="board" class="board">
+    <h1>Kanban board</h1>
+    <button class="create-column">Add a column</button>
+    <div class="column-container"></div>
+	</div> -->
+
+<script id="column-template" type="x-tmpl-mustache">
+  <div class="column card border-info">
+
+    <div class="card-header flex-headline">
+      <h2 class="column-title">{{ name }}</h2>
+      <button class="btn-delete">X</button>
+    </div>
+
+    <div class="card-header text-center">
+      <button class="add-card btn btn-info">Add a card</button>
+    </div>
+
+    <div class="card-body text-info">
+      <ul id="{{ id }}" class="column-card-list"></ul>
+    </div>
+
+  </div>
+  </script>
+
+
+
+  <!-- <script id="column-template" type="x-tmpl-mustache">
+    <div class="column">
+          <button class="btn-delete btn-danger">X</button>
+          <h2 class="column-title">{{ name }}</h2>
+          <button class="add-card">Add a card</button>
+      <ul id="{{ id }}" class="column-card-list"></ul>
+    </div>
+  </script> -->
+
+
+  <script id="card-template" type="x-tmpl-mustache">
+    <div class="card-style">
+      <p class="card-description">{{ description }}</p>
+      <button class="btn-delete">x</button>
+    </div
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

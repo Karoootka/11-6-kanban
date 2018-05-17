@@ -1,0 +1,27 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.container { max-width: 1300px; margin: 0 auto; }
+
+.bigger-container { max-width: 1400px; margin: 0 auto; }
+
+.navbar h1 { font-size: 42px; font-family: 'Passion One', cursive; margin: 0; letter-spacing: 4px; text-transform: uppercase; }
+
+.column-container .card { height: 100%; }
+
+.column-container .col { margin-top: 20px; }
+
+.column .flex-headline { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; background-color: #d3d3d3; }
+
+.column .flex-headline h2.column-title { -ms-flex: 10; flex: 10; text-align: left; margin: 0; font-size: 35px; font-family: 'Passion One', cursive; letter-spacing: 3px; text-transform: uppercase; color: #343a40; }
+
+.column button.add-card { width: 80%; border: none; }
+
+.column ul { list-style: none; }
+
+.card-style { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; }
+
+.card-style p.card-description { margin: 0; -ms-flex: 1; flex: 1; font-size: 20px; }
+
+.btn-delete { font-size: 20px; background-color: inherit; border: none; color: #343a40; cursor: pointer; }
+
+.btn-delete:hover { color: #c90404; }
