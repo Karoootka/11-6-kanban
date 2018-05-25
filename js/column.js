@@ -11,7 +11,7 @@ function Column(id, name) {
       self.removeColumn();
     }
     if (event.target.classList.contains('add-card')) {
-      var cardName = prompt("Enter the name of the card");
+      var cardName = prompt('Enter the name of the card');
       event.preventDefault();
 
       var data = new FormData();
@@ -25,6 +25,23 @@ function Column(id, name) {
         .then(function(resp) {
           var card = new Card(resp.id, cardName);
           self.addCard(card);
+        })
+    }
+
+    if (event.target.classList.contains('column-title')) {
+      var newColumnTitle = prompt('Enter new column title') || 'No name given';
+      event.preventDefault();
+
+      var data = new FormData();
+      data.append('name', newColumnTitle);
+
+      fetch(baseUrl + '/column/' + self.id, { method: 'PUT', headers: myHeaders, body: data})
+        .then(function(resp) {
+          return resp.json();
+        })
+        .then(function(resp) {
+          self.name = newColumnTitle;
+          self.element.querySelector('.column-title').innerHTML = self.name;
         })
     }
   });

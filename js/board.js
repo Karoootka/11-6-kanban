@@ -6,6 +6,12 @@ var board = {
     this.element.appendChild(column.element);
     initSortable(column.id);
   },
+  moveCard: function(colId, cardId) {
+    var data = new FormData();
+    data.append('bootcamp_kanban_column_id', colId);
+    data.append('name', colId);
+    fetch(baseUrl + '/card/' + cardId, { method: 'PUT', headers: myHeaders, body: data})
+  },
   element: document.querySelector('#board .column-container')
 };
 
@@ -33,6 +39,11 @@ function initSortable(id) {
   var sortable = Sortable.create(el, {
     group: 'kanban',
     sort: true,
-    animation: 100
+    animation: 100,
+    onAdd: function(evt) {
+      var colId = evt.target.id;
+      var cardId = evt.item.querySelector('.card-style').id;
+      board.moveCard(colId, cardId);
+    }
   });
 };
