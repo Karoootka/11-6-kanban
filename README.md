@@ -1,6 +1,6 @@
 # 11-6-kanban
 
-Zadanie wykonane w ramamch bootcampu Kodilla - "Web developer"
+Zadanie wykonane w ramach bootcampu Kodilla - "Web developer"
 
 Opis: Przećwiczenie wykorzystania technologii AJAX. Efektem jest aplikacja kanban, która wykorzystuje specjalnie przygotowane na potrzeby kursu API.
 
