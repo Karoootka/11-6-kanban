@@ -9,7 +9,7 @@ var board = {
   moveCard: function(colId, cardId) {
     var data = new FormData();
     data.append('bootcamp_kanban_column_id', colId);
-    data.append('name', colId);
+    
     fetch(baseUrl + '/card/' + cardId, { method: 'PUT', headers: myHeaders, body: data})
   },
   element: document.querySelector('#board .column-container')
